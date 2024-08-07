@@ -1,0 +1,14 @@
+.result {
+    /* text-align: left; */
+    margin-top: 16px;
+}
+
+.result b{
+    font-weight: bold;
+}
+
+.resultTitle{
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
