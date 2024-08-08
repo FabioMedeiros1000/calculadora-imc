@@ -15,7 +15,7 @@ const Forms = () => {
 
     const calculaImc = () => {
         const imcValue = peso / (altura * altura);
-        setImcCalculado(imcValue.toFixed(3));
+        setImcCalculado(imcValue.toFixed(1));
         if (imcValue > 0 && imcValue < 100){
             setMostraResultado(true);
         } 
@@ -24,23 +24,27 @@ const Forms = () => {
         }
     }
 
-    // useEffect(calculaImc, [imcCalculado]);
-
     return(
         <>
             <form className={styles.form}>
-                <input onBlur={(evento) => setPeso(evento.target.value)} min='0' max='500' className={styles.formWeight} type="number" placeholder="Digite o seu peso" />
-                <input onBlur={(evento) => setAltura(evento.target.value)} min='0' max='500' className={styles.formHeight} type="number" placeholder="Digite sua altura" />
+                <div className={styles.formContainer}>
+                    <label>Peso (kg):</label>
+                    <input onBlur={(evento) => setPeso(evento.target.value)} min='0' max='500' className={styles.formWeight} type="number" />
+                </div>
+                <div className={styles.formContainer}>
+                    <label>Altura (m):</label>
+                    <input onBlur={(evento) => setAltura(evento.target.value)} min='0' max='500' className={styles.formHeight} type="number" />
+                </div>
                 <button onClick={calculaImc} className={styles.formButton} type="button">Ver IMC</button>
             </form>
             {mostraResultado && (
                 <>
-                    {console.log(imcCalculado)}
-                    <ImcTable imcValueProp={imcCalculado} />
+                    {/* {console.log(imcCalculado)} */}
                     <Result imcValueProp={imcCalculado}/>
+                    <ImcTable imcValueProp={imcCalculado} />
                 </>
             )}
-            {!mostraResultado &&(
+            {!mostraResultado && (peso.length > 0) && (altura.length > 0) && (
                 <h2>Digite um valor válido</h2>
             )}
         </>

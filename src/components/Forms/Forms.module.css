@@ -1,13 +1,12 @@
 .form {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: end;
     margin-bottom: 16px;
 }
 
 .formWeight, .formHeight {
     padding: 8px;
-    width: 40%;
     font-weight: bold;
     border: 1px solid var(--corDoTexto); 
     
@@ -21,4 +20,20 @@
     padding: 8px;
     font-weight: bold;
     border: 1px solid var(--corDoTexto); 
+    cursor: pointer;
+}
+
+.formButton:hover{
+    background-color: var(--corDoTexto);
+    color: var(--corDeFundo);
+}
+
+.formContainer{
+    display: block;
+    width: 33%;
+}
+
+.formContainer label, .formContainer input{
+    width: 100%;
+    font-weight: bold;
 }
