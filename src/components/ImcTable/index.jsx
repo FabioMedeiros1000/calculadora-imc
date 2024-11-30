@@ -1,4 +1,5 @@
 import styles from './ImcTable.module.css';
+import PropTypes from 'prop-types';
 
 const ImcTable = ({ imcValueProp }) => {
     const dataTable = [
@@ -36,6 +37,10 @@ const ImcTable = ({ imcValueProp }) => {
             </tbody>
         </table>
     );
+};
+
+ImcTable.propTypes = {
+    imcValueProp: PropTypes.number.isRequired
 };
 
 export default ImcTable;

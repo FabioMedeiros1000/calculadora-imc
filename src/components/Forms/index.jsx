@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import ImcTable from '../ImcTable';
 import Result from '../Result';
@@ -25,7 +25,7 @@ const Forms = () => {
     }
 
     return(
-        <>
+        <div className='container'>
             <form className={styles.form}>
                 <div className={styles.formContainer}>
                     <label>Peso (kg):</label>
@@ -39,7 +39,6 @@ const Forms = () => {
             </form>
             {mostraResultado && (
                 <>
-                    {/* {console.log(imcCalculado)} */}
                     <Result imcValueProp={imcCalculado}/>
                     <ImcTable imcValueProp={imcCalculado} />
                 </>
@@ -47,7 +46,7 @@ const Forms = () => {
             {!mostraResultado && (peso.length > 0) && (altura.length > 0) && (
                 <h2>Digite um valor válido</h2>
             )}
-        </>
+        </div>
     )
 }
 
