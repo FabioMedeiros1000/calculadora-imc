@@ -8,23 +8,23 @@
 .formWeight, .formHeight {
     padding: 8px;
     font-weight: bold;
-    border: 1px solid var(--corDoTexto); 
+    border: 2px solid var(--white); 
 }
 
 .formWeight:focus, .formHeight:focus {
-    outline-color: var(--corDoTexto); 
+    outline-color: var(--white); 
 }
 
 .formButton {
     padding: 8px;
     font-weight: bold;
-    border: 1px solid var(--corDoTexto); 
+    border: 2px solid var(--white); 
     cursor: pointer;
 }
 
 .formButton:hover{
-    background-color: var(--corDoTexto);
-    color: var(--corDeFundo);
+    background-color: var(--white);
+    color: var(--blue);
 }
 
 .formContainer{

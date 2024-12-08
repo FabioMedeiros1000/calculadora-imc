@@ -1,7 +1,6 @@
 :root{
-    --corDoTexto: #6e5b54;
-    --corDeFundo: #f4eed4;
-    --corSecundaria: #c3b68c
+    --white: #F2F2F2;
+    --blue: #2D3E50;
 }
 
 * {
@@ -11,8 +10,8 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 16px;
-    background-color: var(--corDeFundo);
-    color: var(--corDoTexto);
+    background-color: var(--blue);
+    color: var(--white);
 }
 
 .container {

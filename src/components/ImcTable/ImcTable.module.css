@@ -5,13 +5,20 @@
     margin-bottom: 40px;
 }
 
+.table th {
+    font-weight: bold;
+    font-size: 24px;
+}
+
 .tableCol {
     padding: 16px;
     border: none;
-    border: 1px solid var(--corDoTexto);
+    border: 1px solid var(--white);
 }
 
 .highlight {
-    background-color: var(--corSecundaria);
-    color: #fff;
+    background-color: var(--white);
+    color: var(--blue);
+    font-weight: bold;
+    font-size: 20px;
 }
