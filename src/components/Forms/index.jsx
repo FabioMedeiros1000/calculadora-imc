@@ -6,21 +6,21 @@ import Result from '../Result';
 import styles from './Forms.module.css'
 
 const Forms = () => {
-    const [imcCalculado, setImcCalculado] = useState(0);
+    const [imcCalculated, setImcCalculated] = useState(0);
 
-    const [peso, setPeso] = useState(0);
-    const [altura, setAltura] = useState(0);
+    const [weigth, setWeigth] = useState(0);
+    const [height, setHeight] = useState(0);
 
-    const [mostraResultado, setMostraResultado] = useState(false);
+    const [showResult, setShowResult] = useState(false);
 
-    const calculaImc = () => {
-        const imcValue = peso / (altura * altura);
-        setImcCalculado(imcValue.toFixed(1));
+    const calculateImc = () => {
+        const imcValue = weigth / (height * height);
+        setImcCalculated(imcValue.toFixed(1));
         if (imcValue > 0 && imcValue < 100){
-            setMostraResultado(true);
+            setShowResult(true);
         } 
         else{
-            setMostraResultado(false);
+            setShowResult(false);
         }
     }
 
@@ -29,21 +29,21 @@ const Forms = () => {
             <form className={styles.form}>
                 <div className={styles.formContainer}>
                     <label>Peso (kg):</label>
-                    <input onBlur={(evento) => setPeso(evento.target.value)} min='0' max='500' className={styles.formWeight} type="number" />
+                    <input onBlur={(evento) => setWeigth(evento.target.value)} min='0' max='500' className={styles.formWeight} type="number" />
                 </div>
                 <div className={styles.formContainer}>
                     <label>Altura (m):</label>
-                    <input onBlur={(evento) => setAltura(evento.target.value)} min='0' max='500' className={styles.formHeight} type="number" />
+                    <input onBlur={(evento) => setHeight(evento.target.value)} min='0' max='500' className={styles.formHeight} type="number" />
                 </div>
-                <button onClick={calculaImc} className={styles.formButton} type="button">Ver IMC</button>
+                <button onClick={calculateImc} className={styles.formButton} type="button">Ver IMC</button>
             </form>
-            {mostraResultado && (
+            {showResult && (
                 <>
-                    <Result imcValueProp={imcCalculado}/>
-                    <ImcTable imcValueProp={imcCalculado} />
+                    <Result imcValueProp={imcCalculated}/>
+                    <ImcTable imcValueProp={imcCalculated} />
                 </>
             )}
-            {!mostraResultado && (peso.length > 0) && (altura.length > 0) && (
+            {!showResult && (weigth.length > 0) && (height.length > 0) && (
                 <h2>Digite um valor válido</h2>
             )}
         </div>

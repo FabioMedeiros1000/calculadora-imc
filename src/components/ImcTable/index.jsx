@@ -1,5 +1,6 @@
-import styles from './ImcTable.module.css';
 import PropTypes from 'prop-types';
+
+import styles from './ImcTable.module.css';
 
 const ImcTable = ({ imcValueProp }) => {
     const dataTable = [
