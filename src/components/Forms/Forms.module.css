@@ -27,12 +27,12 @@
     color: var(--blue);
 }
 
-.formContainer{
+.formGroup{
     display: block;
     width: 33%;
 }
 
-.formContainer label, .formContainer input{
+.formGroup label, .formGroup input{
     width: 100%;
     font-weight: bold;
 }
