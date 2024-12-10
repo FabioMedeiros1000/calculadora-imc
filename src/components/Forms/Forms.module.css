@@ -7,7 +7,6 @@
 
 .formWeight, .formHeight {
     padding: 8px;
-    font-weight: bold;
     border: 2px solid var(--white); 
 }
 
@@ -16,13 +15,16 @@
 }
 
 .formButton {
-    padding: 8px;
     font-weight: bold;
+    padding: 8px;
     border: 2px solid var(--white); 
     cursor: pointer;
 }
 
-.formButton:hover{
+.formButtonHighlight{
+    font-weight: bold;
+    padding: 8px;
+    border: 2px solid var(--white);
     background-color: var(--white);
     color: var(--blue);
 }
@@ -35,4 +37,5 @@
 .formGroup label, .formGroup input{
     width: 100%;
     font-weight: bold;
+    
 }
