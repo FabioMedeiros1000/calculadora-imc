@@ -2,6 +2,8 @@
 
 Este projeto é uma aplicação simples de calculadora de Índice de Massa Corporal (IMC), desenvolvida para ajudar a determinar a faixa de peso corporal com base na altura e peso do usuário.
 
+![Imagem da aplicação](./imc.png)
+
 ## Visão Geral
 
 A Calculadora IMC permite que os usuários insiram sua altura e peso para calcular seu IMC e determinar sua classificação de peso. 
