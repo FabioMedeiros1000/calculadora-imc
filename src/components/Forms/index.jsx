@@ -29,11 +29,11 @@ const Forms = () => {
             <form className={styles.form}>
                 <div className={styles.formGroup}>
                     <label>Peso (kg):</label>
-                    <input onBlur={(evento) => setWeigth(evento.target.value)} min='0' max='500' className={styles.formWeight} type="number" />
+                    <input onBlur={(event) => setWeigth(event.target.value)} min='0' max='500' className={styles.formWeight} type="number" />
                 </div>
                 <div className={styles.formGroup}>
                     <label>Altura (m):</label>
-                    <input onBlur={(evento) => setHeight(evento.target.value)} min='0' max='500' className={styles.formHeight} type="number" />
+                    <input onBlur={(event) => setHeight(event.target.value)} min='0' max='500' className={styles.formHeight} type="number" />
                 </div>
                 <button onClick={calculateImc} className={styles.formButton} type="button">Ver IMC</button>
             </form>
